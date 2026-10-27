@@ -1,0 +1,638 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --pink: #e73d66;
+    --pink-light: #ffe3eb;
+    --text: #484848;
+    --gray: #444444;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    line-height:1.5;
+    color: var(--text);
+    background-color: var(--white);
+}
+
+h1,h2,h3,p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,input {
+    font: inherit;
+}
+
+.container {
+    width: min(100% - 40px, 1170px);
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: 60px;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-area {
+    padding-top: 24px;
+    background-color: var(--white);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    min-height: 80px;
+    padding: 16px 32px;
+    
+    color: var(--white);
+    background-color: var(--pink);
+    border-radius: 50px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navigation a {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navigation a:hover {
+    opacity: 0.7;
+}
+
+.menu-button {
+    display: none;
+    padding: 8px;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    padding-top: 70px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hero-subtitle span,.hero h1 span {
+    color: var(--pink);
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+    font-size: clamp(36px, 5vw, 88px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+}
+
+.about {
+    text-align: center;
+}
+
+.about-title {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size:30px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.about-text {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 14px 32px;
+
+    border: 1px solid transparent;
+    border-radius: 30px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: background-color 0.2, color 0.2s;
+}
+
+.button-primary {
+    color: var(--white);
+    background-color: var(--pink);
+}
+
+.button-primary:hover {
+    background-color: var(--text);
+}
+
+.button-outline {
+    color: var(--pink);
+    border-color: var(--pink);
+    background-color: transparent;
+}
+
+.button-outline:hover {
+    background-color: var(--pink-light);
+}
+
+.button:focus-visible,.navigation a:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 4px;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    padding-top: 32px;
+    border-radius: 32px;
+
+    text-align: center;
+    background-color: var(--white);
+}
+
+.pet-breed {
+    margin-bottom: 8px;
+    padding-inline: 12px;
+    color: var(--pink);
+    font-size: 12px;
+}
+
+.pet-name {
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.pet-info {
+    margin-bottom: 24px;
+    font-size: 12px;
+}
+
+.pet-image {
+    width: 100%;
+    height: 250px;
+    margin-top: auto;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 32px;
+
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.steps li {
+    position: relative;
+    counter-increment: step;
+    text-align: center;
+}
+
+.steps li::before {
+    content: counter(step);
+    display: block;
+    margin-bottom: 16px;
+    color: var(--pink);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.steps li::not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 72%;
+    width: 45%;
+    height: 1px;
+    background-color: var(--pink);
+}
+
+.steps h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 1.3;
+}
+
+.steps p {
+    font-size: 13px;
+}
+
+
+.adoption-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+.advice-list {
+    display: grid;
+    gap: 60px;
+}
+
+.advice-item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 60px;
+}
+
+.advice-item > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.advice-content h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 500px;
+    line-height: 1.3;
+}
+
+.advice-content p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.advice-item:nth-child(even) > img {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.advice-item:nth-child(even) > .advice-content {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.footer {
+    padding-block: 40px 24px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.contact-icon img {
+    width: 280px;
+    height: 118px;
+    object-fit: contain;
+}
+
+.contact-email {
+    color: var(--pink);
+    overflow-wrap: anywhere;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 32px;
+
+    padding: 60px 40px;
+    border-radius: 32px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+
+.contacts > a {
+    color: var(--pink);
+}
+
+.contacts-phone {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.contacts p {
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    
+    font-size: 12px;
+    color: #999999;
+}
+
+.footer-bottom a:hover {
+    color: var(--pink);
+}
+
+@media (max-width: 1024px) {
+    .hero-area {
+        padding-top: 0;
+    }
+
+    .header {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero h1 {
+        max-width: 650px;
+        margin-inline: auto;
+    }
+
+    .pets-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .steps li {
+        grid-column: span 2;
+    }
+
+    /* Центрируем два шага во втором ряду */
+    .steps li:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .steps li:nth-child(5) {
+        grid-column: 4 / span 2;
+    }
+
+    .steps li:nth-child(3)::after {
+        display: none;
+    }
+
+    .advice-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .advice-item:nth-child(even) > img,
+    .advice-item:nth-child(even) > .advice-content {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .contacts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .header {
+        width: 100%;
+        min-height: 60px;
+        padding: 12px 16px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .section {
+        padding-block: 36px;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+        font-size: 24px;
+    }
+
+    .hero {
+        padding-top: 36px;
+        overflow: hidden;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 20px;
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+
+    .about-text {
+        font-size: 13px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: min(100%, 260px);
+    }
+
+    .pets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pet-card {
+        width: 100%;
+        max-width: 340px;
+        margin-inline: auto;
+    }
+
+    .pet-image {
+        height: 280px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .steps li,
+    .steps li:nth-child(4),
+    .steps li:nth-child(5) {
+        grid-column: auto;
+        padding-left: 36px;
+        text-align: left;
+    }
+
+    .steps li::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 24px;
+    }
+
+    .steps li:not(:last-child)::after {
+        display: block;
+        top: 32px;
+        left: 8px;
+        width: 1px;
+        height: calc(100% - 14px);
+    }
+
+    .advice-list {
+        gap: 36px;
+    }
+
+    .advice-content h3 {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+
+    .advice-content p {
+        font-size: 14px;
+    }
+
+    .contacts {
+        grid-template-columns: 1fr;
+        padding: 36px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 32px;
+        text-align: center;
+    }
+}
