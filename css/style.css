@@ -99,6 +99,7 @@ button,input {
     background-color: var(--pink);
     border-radius: 50px;
 }
+
 .header-socials {
     display: flex;
     align-items: center;
@@ -129,6 +130,7 @@ button,input {
     outline-offset: 3px;
     border-radius: 4px;
 }
+
 .logo {
     flex-shrink: 0;
 }
