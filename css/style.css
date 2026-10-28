@@ -28,6 +28,7 @@
     --text: #484848;
     --gray: #444444;
     --white: #ffffff;
+    --fone: #f4f4f4;
 }
 
 * {
@@ -81,7 +82,7 @@ button,input {
 
 .hero-area {
     padding-top: 24px;
-    background-color: var(--white);
+    background-color: var(--fone);
 }
 
 .header {
@@ -248,7 +249,7 @@ button,input {
     border-radius: 32px;
 
     text-align: center;
-    background-color: var(--white);
+    background-color: var(--fone);
 }
 
 .pet-breed {
@@ -412,7 +413,7 @@ button,input {
 
     padding: 60px 40px;
     border-radius: 32px;
-    background-color: var(--white);
+    background-color: var(--fone);
     text-align: center;
 }
 
